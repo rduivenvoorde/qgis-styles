@@ -1,14 +1,16 @@
 <!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
-<qgis projectname="" version="2.17.0-Master">
+<qgis projectname="" version="2.16.0-Nødebo">
   <title></title>
   <autotransaction active="0"/>
   <evaluateDefaultValues active="0"/>
-  <layer-tree-group expanded="1" checked="Qt::Checked" name="">
+  <layer-tree-group expanded="1" checked="Qt::PartiallyChecked" name="">
     <customproperties/>
-    <layer-tree-layer expanded="1" checked="Qt::Checked" id="points20160812134437377" name="points">
-      <customproperties/>
+    <layer-tree-layer expanded="0" checked="Qt::Checked" id="points20160812134437377" name="points">
+      <customproperties>
+        <property key="showFeatureCount" value="1"/>
+      </customproperties>
     </layer-tree-layer>
-    <layer-tree-layer expanded="1" checked="Qt::Checked" id="places20160812134437373" name="places">
+    <layer-tree-layer expanded="0" checked="Qt::Checked" id="places20160812134437373" name="places">
       <customproperties/>
     </layer-tree-layer>
     <layer-tree-layer expanded="1" checked="Qt::Checked" id="railways20160812134437381" name="railways">
@@ -29,15 +31,18 @@
     <layer-tree-layer expanded="0" checked="Qt::Checked" id="landuse20160812134437367" name="landuse">
       <customproperties/>
     </layer-tree-layer>
+    <layer-tree-layer expanded="1" checked="Qt::Unchecked" id="OpenStreetMap20160812145050018" name="OpenStreetMap">
+      <customproperties/>
+    </layer-tree-layer>
   </layer-tree-group>
   <relations/>
   <mapcanvas>
     <units>meters</units>
     <extent>
-      <xmin>825314.53004245134070516</xmin>
-      <ymin>5424309.0672996798530221</ymin>
-      <xmax>825615.18214684585109353</xmax>
-      <ymax>5424485.55475351307541132</ymax>
+      <xmin>825572.60765070968773216</xmin>
+      <ymin>5424289.66057387832552195</ymin>
+      <xmax>825985.63997528457548469</xmax>
+      <ymax>5424845.50398526433855295</ymax>
     </extent>
     <rotation>0</rotation>
     <projections>1</projections>
@@ -61,6 +66,7 @@
       <layer_coordinate_transform destAuthId="EPSG:3857" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="railways20160812134437381"/>
       <layer_coordinate_transform destAuthId="EPSG:3857" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="natural20160812134437370"/>
       <layer_coordinate_transform destAuthId="EPSG:3857" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="places20160812134437373"/>
+      <layer_coordinate_transform destAuthId="EPSG:3857" srcAuthId="EPSG:3857" srcDatumTransform="-1" destDatumTransform="-1" layerid="OpenStreetMap20160812145050018"/>
       <layer_coordinate_transform destAuthId="EPSG:3857" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="roads20160812134437384"/>
       <layer_coordinate_transform destAuthId="EPSG:3857" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="waterways20160812134437386"/>
     </layer_coordinate_transform_info>
@@ -75,16 +81,17 @@
       <item>railways20160812134437381</item>
       <item>roads20160812134437384</item>
       <item>waterways20160812134437386</item>
+      <item>OpenStreetMap20160812145050018</item>
     </custom-order>
   </layer-tree-canvas>
   <legend updateDrawingOrder="true">
-    <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="points" showFeatureCount="0">
-      <filegroup open="true" hidden="false">
+    <legendlayer drawingOrder="-1" open="false" checked="Qt::Checked" name="points" showFeatureCount="1">
+      <filegroup open="false" hidden="false">
         <legendlayerfile isInOverview="0" layerid="points20160812134437377" visible="1"/>
       </filegroup>
     </legendlayer>
-    <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="places" showFeatureCount="0">
-      <filegroup open="true" hidden="false">
+    <legendlayer drawingOrder="-1" open="false" checked="Qt::Checked" name="places" showFeatureCount="0">
+      <filegroup open="false" hidden="false">
         <legendlayerfile isInOverview="0" layerid="places20160812134437373" visible="1"/>
       </filegroup>
     </legendlayer>
@@ -118,8 +125,60 @@
         <legendlayerfile isInOverview="0" layerid="landuse20160812134437367" visible="1"/>
       </filegroup>
     </legendlayer>
+    <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="OpenStreetMap" showFeatureCount="0">
+      <filegroup open="true" hidden="false">
+        <legendlayerfile isInOverview="0" layerid="OpenStreetMap20160812145050018" visible="0"/>
+      </filegroup>
+    </legendlayer>
   </legend>
   <projectlayers>
+    <maplayer minimumScale="0" maximumScale="1e+08" type="raster" hasScaleBasedVisibilityFlag="0">
+      <extent>
+        <xmin>-20037508.33999999985098839</xmin>
+        <ymin>-20037508.33999999985098839</ymin>
+        <xmax>20037508.33999999985098839</xmax>
+        <ymax>20037508.33999999985098839</ymax>
+      </extent>
+      <id>OpenStreetMap20160812145050018</id>
+      <datasource>../../../../../../.qgis2/python/plugins/inasafe/resources/osm/WorldOSM.gdal</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>OpenStreetMap</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext  +no_defs</proj4>
+          <srsid>3857</srsid>
+          <srid>3857</srid>
+          <authid>EPSG:3857</authid>
+          <description>WGS 84 / Pseudo Mercator</description>
+          <projectionacronym>merc</projectionacronym>
+          <ellipsoidacronym>WGS84</ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <customproperties>
+        <property key="identify/format" value="Value"/>
+      </customproperties>
+      <provider>gdal</provider>
+      <noData>
+        <noDataList bandNo="1" useSrcNoData="0"/>
+        <noDataList bandNo="2" useSrcNoData="0"/>
+        <noDataList bandNo="3" useSrcNoData="0"/>
+      </noData>
+      <map-layer-style-manager current="">
+        <map-layer-style name=""/>
+      </map-layer-style-manager>
+      <pipe>
+        <rasterrenderer opacity="1" alphaBand="-1" blueBand="3" greenBand="2" type="multibandcolor" redBand="1">
+          <rasterTransparency/>
+        </rasterrenderer>
+        <brightnesscontrast brightness="0" contrast="0"/>
+        <huesaturation colorizeGreen="128" colorizeOn="0" colorizeRed="255" colorizeBlue="128" grayscaleMode="0" saturation="0" colorizeStrength="100"/>
+        <rasterresampler maxOversampling="2" zoomedOutResampler="bilinear" zoomedInResampler="bilinear"/>
+      </pipe>
+      <blendMode>0</blendMode>
+    </maplayer>
     <maplayer simplifyAlgorithm="0" minimumScale="5000" maximumScale="5000" simplifyDrawingHints="1" readOnly="0" minLabelScale="1" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
       <extent>
         <xmin>7.40895290000000006</xmin>
@@ -128,7 +187,7 @@
         <ymax>43.75165590000000293</ymax>
       </extent>
       <id>buildings20160812134437346</id>
-      <datasource>./data/buildings.shp</datasource>
+      <datasource>../data/buildings.shp</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -480,7 +539,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>43.75316370000000177</ymax>
       </extent>
       <id>landuse20160812134437367</id>
-      <datasource>./data/landuse.shp</datasource>
+      <datasource>../data/landuse.shp</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -1311,7 +1370,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>43.74780249999999882</ymax>
       </extent>
       <id>natural20160812134437370</id>
-      <datasource>./data/natural.shp</datasource>
+      <datasource>../data/natural.shp</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -1687,7 +1746,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>43.74807710000000327</ymax>
       </extent>
       <id>places20160812134437373</id>
-      <datasource>./data/places.shp</datasource>
+      <datasource>../data/places.shp</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -2127,7 +2186,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>43.7514279999999971</ymax>
       </extent>
       <id>points20160812134437377</id>
-      <datasource>./data/points.shp</datasource>
+      <datasource>../data/points.shp</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -2169,110 +2228,108 @@ def my_form_open(dialog, layer, feature):
       <renderer-v2 attr="type" forceraster="0" symbollevels="0" type="categorizedSymbol" enableorderby="0">
         <categories>
           <category render="true" symbol="0" value="artwork" label="artwork"/>
-          <category render="true" symbol="1" value="atm" label="atm"/>
-          <category render="true" symbol="2" value="attraction" label="attraction"/>
-          <category render="true" symbol="3" value="bag" label="bag"/>
-          <category render="true" symbol="4" value="bakery" label="bakery"/>
+          <category render="false" symbol="1" value="atm" label="atm"/>
+          <category render="false" symbol="2" value="attraction" label="attraction"/>
+          <category render="false" symbol="3" value="bag" label="bag"/>
+          <category render="false" symbol="4" value="bakery" label="bakery"/>
           <category render="true" symbol="5" value="bank" label="bank"/>
-          <category render="true" symbol="6" value="bar" label="bar"/>
-          <category render="true" symbol="7" value="bench" label="bench"/>
-          <category render="true" symbol="8" value="books" label="books"/>
-          <category render="true" symbol="9" value="boundary_stone" label="boundary_stone"/>
-          <category render="true" symbol="10" value="bus_station" label="bus_station"/>
+          <category render="false" symbol="6" value="bar" label="bar"/>
+          <category render="false" symbol="7" value="bench" label="bench"/>
+          <category render="false" symbol="8" value="books" label="books"/>
+          <category render="false" symbol="9" value="boundary_stone" label="boundary_stone"/>
+          <category render="false" symbol="10" value="bus_station" label="bus_station"/>
           <category render="true" symbol="11" value="bus_stop" label="bus_stop"/>
-          <category render="true" symbol="12" value="butcher" label="butcher"/>
+          <category render="false" symbol="12" value="butcher" label="butcher"/>
           <category render="true" symbol="13" value="cafe" label="cafe"/>
-          <category render="true" symbol="14" value="car" label="car"/>
-          <category render="true" symbol="15" value="car_wash" label="car_wash"/>
-          <category render="true" symbol="16" value="clothes" label="clothes"/>
-          <category render="true" symbol="17" value="convenience" label="convenience"/>
-          <category render="true" symbol="18" value="convenience;doit" label="convenience;doit"/>
-          <category render="true" symbol="19" value="courthouse" label="courthouse"/>
-          <category render="true" symbol="20" value="crossing" label="crossing"/>
-          <category render="true" symbol="21" value="deli" label="deli"/>
-          <category render="true" symbol="22" value="drinking_water" label="drinking_water"/>
-          <category render="true" symbol="23" value="electronics" label="electronics"/>
-          <category render="true" symbol="24" value="elevator" label="elevator"/>
-          <category render="true" symbol="25" value="embassy" label="embassy"/>
-          <category render="true" symbol="26" value="estate_agent" label="estate_agent"/>
-          <category render="true" symbol="27" value="fast_food" label="fast_food"/>
-          <category render="true" symbol="28" value="ferry_terminal" label="ferry_terminal"/>
-          <category render="true" symbol="29" value="fire_station" label="fire_station"/>
-          <category render="true" symbol="30" value="fondation" label="fondation"/>
-          <category render="true" symbol="31" value="fountain" label="fountain"/>
-          <category render="true" symbol="32" value="fuel" label="fuel"/>
-          <category render="true" symbol="33" value="gift" label="gift"/>
-          <category render="true" symbol="34" value="hairdresser" label="hairdresser"/>
-          <category render="true" symbol="35" value="hospital" label="hospital"/>
+          <category render="false" symbol="14" value="car" label="car"/>
+          <category render="false" symbol="15" value="car_wash" label="car_wash"/>
+          <category render="false" symbol="16" value="clothes" label="clothes"/>
+          <category render="false" symbol="17" value="convenience" label="convenience"/>
+          <category render="false" symbol="18" value="convenience;doit" label="convenience;doit"/>
+          <category render="false" symbol="19" value="courthouse" label="courthouse"/>
+          <category render="false" symbol="20" value="crossing" label="crossing"/>
+          <category render="false" symbol="21" value="deli" label="deli"/>
+          <category render="false" symbol="22" value="drinking_water" label="drinking_water"/>
+          <category render="false" symbol="23" value="electronics" label="electronics"/>
+          <category render="false" symbol="24" value="elevator" label="elevator"/>
+          <category render="false" symbol="25" value="embassy" label="embassy"/>
+          <category render="false" symbol="26" value="estate_agent" label="estate_agent"/>
+          <category render="false" symbol="27" value="fast_food" label="fast_food"/>
+          <category render="false" symbol="28" value="ferry_terminal" label="ferry_terminal"/>
+          <category render="false" symbol="29" value="fire_station" label="fire_station"/>
+          <category render="false" symbol="30" value="fondation" label="fondation"/>
+          <category render="false" symbol="31" value="fountain" label="fountain"/>
+          <category render="false" symbol="32" value="fuel" label="fuel"/>
+          <category render="false" symbol="33" value="gift" label="gift"/>
+          <category render="false" symbol="34" value="hairdresser" label="hairdresser"/>
+          <category render="false" symbol="35" value="hospital" label="hospital"/>
           <category render="true" symbol="36" value="hotel" label="hotel"/>
-          <category render="true" symbol="37" value="ice_cream" label="ice_cream"/>
+          <category render="false" symbol="37" value="ice_cream" label="ice_cream"/>
           <category render="true" symbol="38" value="information" label="information"/>
-          <category render="true" symbol="39" value="insurance" label="insurance"/>
-          <category render="true" symbol="40" value="jewelry" label="jewelry"/>
-          <category render="true" symbol="41" value="kindergarten" label="kindergarten"/>
-          <category render="true" symbol="42" value="kiosk" label="kiosk"/>
-          <category render="true" symbol="43" value="library" label="library"/>
-          <category render="true" symbol="44" value="memorial" label="memorial"/>
-          <category render="true" symbol="45" value="mini_roundabout" label="mini_roundabout"/>
-          <category render="true" symbol="46" value="monument" label="monument"/>
-          <category render="true" symbol="47" value="museum" label="museum"/>
-          <category render="true" symbol="48" value="newsagent" label="newsagent"/>
-          <category render="true" symbol="49" value="nightclub" label="nightclub"/>
+          <category render="false" symbol="39" value="insurance" label="insurance"/>
+          <category render="false" symbol="40" value="jewelry" label="jewelry"/>
+          <category render="false" symbol="41" value="kindergarten" label="kindergarten"/>
+          <category render="false" symbol="42" value="kiosk" label="kiosk"/>
+          <category render="false" symbol="43" value="library" label="library"/>
+          <category render="false" symbol="44" value="memorial" label="memorial"/>
+          <category render="false" symbol="45" value="mini_roundabout" label="mini_roundabout"/>
+          <category render="false" symbol="46" value="monument" label="monument"/>
+          <category render="false" symbol="47" value="museum" label="museum"/>
+          <category render="false" symbol="48" value="newsagent" label="newsagent"/>
+          <category render="false" symbol="49" value="nightclub" label="nightclub"/>
           <category render="true" symbol="50" value="parking" label="parking"/>
-          <category render="true" symbol="51" value="parking_entrance" label="parking_entrance"/>
-          <category render="true" symbol="52" value="perfumery" label="perfumery"/>
-          <category render="true" symbol="53" value="pharmacy" label="pharmacy"/>
-          <category render="true" symbol="54" value="piano" label="piano"/>
-          <category render="true" symbol="55" value="place_of_worship" label="place_of_worship"/>
-          <category render="true" symbol="56" value="police" label="police"/>
-          <category render="true" symbol="57" value="post_box" label="post_box"/>
-          <category render="true" symbol="58" value="post_office" label="post_office"/>
-          <category render="true" symbol="59" value="pub" label="pub"/>
-          <category render="true" symbol="60" value="recycling" label="recycling"/>
+          <category render="false" symbol="51" value="parking_entrance" label="parking_entrance"/>
+          <category render="false" symbol="52" value="perfumery" label="perfumery"/>
+          <category render="false" symbol="53" value="pharmacy" label="pharmacy"/>
+          <category render="false" symbol="54" value="piano" label="piano"/>
+          <category render="false" symbol="55" value="place_of_worship" label="place_of_worship"/>
+          <category render="false" symbol="56" value="police" label="police"/>
+          <category render="false" symbol="57" value="post_office" label="post_office"/>
+          <category render="false" symbol="58" value="pub" label="pub"/>
+          <category render="false" symbol="59" value="post_box" label="post_box"/>
+          <category render="false" symbol="60" value="recycling" label="recycling"/>
           <category render="true" symbol="61" value="restaurant" label="restaurant"/>
-          <category render="true" symbol="62" value="school" label="school"/>
-          <category render="true" symbol="63" value="shoes" label="shoes"/>
-          <category render="true" symbol="64" value="shower" label="shower"/>
-          <category render="true" symbol="65" value="sports" label="sports"/>
-          <category render="true" symbol="66" value="station" label="station"/>
-          <category render="true" symbol="67" value="street_lamp" label="street_lamp"/>
-          <category render="true" symbol="68" value="subway_entrance" label="subway_entrance"/>
-          <category render="true" symbol="69" value="supermarket" label="supermarket"/>
-          <category render="true" symbol="70" value="survey_point" label="survey_point"/>
-          <category render="true" symbol="71" value="taxi" label="taxi"/>
-          <category render="true" symbol="72" value="telephone" label="telephone"/>
-          <category render="true" symbol="73" value="theatre" label="theatre"/>
+          <category render="false" symbol="62" value="school" label="school"/>
+          <category render="false" symbol="63" value="shoes" label="shoes"/>
+          <category render="false" symbol="64" value="shower" label="shower"/>
+          <category render="false" symbol="65" value="sports" label="sports"/>
+          <category render="false" symbol="66" value="station" label="station"/>
+          <category render="false" symbol="67" value="street_lamp" label="street_lamp"/>
+          <category render="false" symbol="68" value="subway_entrance" label="subway_entrance"/>
+          <category render="false" symbol="69" value="supermarket" label="supermarket"/>
+          <category render="false" symbol="70" value="survey_point" label="survey_point"/>
+          <category render="false" symbol="71" value="taxi" label="taxi"/>
+          <category render="false" symbol="72" value="telephone" label="telephone"/>
+          <category render="false" symbol="73" value="theatre" label="theatre"/>
           <category render="true" symbol="74" value="toilets" label="toilets"/>
-          <category render="true" symbol="75" value="townhall" label="townhall"/>
-          <category render="true" symbol="76" value="toys" label="toys"/>
-          <category render="true" symbol="77" value="traffic_signals" label="traffic_signals"/>
-          <category render="true" symbol="78" value="travel_agency" label="travel_agency"/>
-          <category render="true" symbol="79" value="turning_circle" label="turning_circle"/>
-          <category render="true" symbol="80" value="university" label="university"/>
-          <category render="true" symbol="81" value="vending_machine" label="vending_machine"/>
-          <category render="true" symbol="82" value="viewpoint" label="viewpoint"/>
-          <category render="true" symbol="83" value="yes" label="yes"/>
-          <category render="true" symbol="84" value="zoo" label="zoo"/>
-          <category render="true" symbol="85" value="" label=""/>
+          <category render="false" symbol="75" value="townhall" label="townhall"/>
+          <category render="false" symbol="76" value="toys" label="toys"/>
+          <category render="false" symbol="77" value="traffic_signals" label="traffic_signals"/>
+          <category render="false" symbol="78" value="travel_agency" label="travel_agency"/>
+          <category render="false" symbol="79" value="turning_circle" label="turning_circle"/>
+          <category render="false" symbol="80" value="university" label="university"/>
+          <category render="false" symbol="81" value="vending_machine" label="vending_machine"/>
+          <category render="false" symbol="82" value="viewpoint" label="viewpoint"/>
+          <category render="false" symbol="83" value="yes" label="yes"/>
+          <category render="false" symbol="84" value="zoo" label="zoo"/>
+          <category render="false" symbol="85" value="" label=""/>
         </categories>
         <symbols>
           <symbol alpha="1" clip_to_extent="1" type="marker" name="0">
-            <layer pass="0" class="SimpleMarker" locked="0">
+            <layer pass="0" class="SvgMarker" locked="0">
               <prop k="angle" v="0"/>
               <prop k="color" v="27,86,202,255"/>
               <prop k="horizontal_anchor_point" v="1"/>
-              <prop k="joinstyle" v="bevel"/>
-              <prop k="name" v="circle"/>
+              <prop k="name" v="artwork-14.svg"/>
               <prop k="offset" v="0,0"/>
               <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
               <prop k="offset_unit" v="MM"/>
               <prop k="outline_color" v="0,0,0,255"/>
-              <prop k="outline_style" v="solid"/>
               <prop k="outline_width" v="0"/>
               <prop k="outline_width_map_unit_scale" v="0,0,0,0,0,0"/>
               <prop k="outline_width_unit" v="MM"/>
               <prop k="scale_method" v="diameter"/>
-              <prop k="size" v="2"/>
+              <prop k="size" v="3"/>
               <prop k="size_map_unit_scale" v="0,0,0,0,0,0"/>
               <prop k="size_unit" v="MM"/>
               <prop k="vertical_anchor_point" v="1"/>
@@ -2323,22 +2380,20 @@ def my_form_open(dialog, layer, feature):
             </layer>
           </symbol>
           <symbol alpha="1" clip_to_extent="1" type="marker" name="11">
-            <layer pass="0" class="SimpleMarker" locked="0">
+            <layer pass="0" class="SvgMarker" locked="0">
               <prop k="angle" v="0"/>
               <prop k="color" v="111,92,223,255"/>
               <prop k="horizontal_anchor_point" v="1"/>
-              <prop k="joinstyle" v="bevel"/>
-              <prop k="name" v="circle"/>
+              <prop k="name" v="bus_stop.12.svg"/>
               <prop k="offset" v="0,0"/>
               <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
               <prop k="offset_unit" v="MM"/>
               <prop k="outline_color" v="0,0,0,255"/>
-              <prop k="outline_style" v="solid"/>
               <prop k="outline_width" v="0"/>
               <prop k="outline_width_map_unit_scale" v="0,0,0,0,0,0"/>
               <prop k="outline_width_unit" v="MM"/>
               <prop k="scale_method" v="diameter"/>
-              <prop k="size" v="2"/>
+              <prop k="size" v="3"/>
               <prop k="size_map_unit_scale" v="0,0,0,0,0,0"/>
               <prop k="size_unit" v="MM"/>
               <prop k="vertical_anchor_point" v="1"/>
@@ -2367,22 +2422,20 @@ def my_form_open(dialog, layer, feature):
             </layer>
           </symbol>
           <symbol alpha="1" clip_to_extent="1" type="marker" name="13">
-            <layer pass="0" class="SimpleMarker" locked="0">
+            <layer pass="0" class="SvgMarker" locked="0">
               <prop k="angle" v="0"/>
               <prop k="color" v="122,60,204,255"/>
               <prop k="horizontal_anchor_point" v="1"/>
-              <prop k="joinstyle" v="bevel"/>
-              <prop k="name" v="circle"/>
+              <prop k="name" v="cafe.16.svg"/>
               <prop k="offset" v="0,0"/>
               <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
               <prop k="offset_unit" v="MM"/>
               <prop k="outline_color" v="0,0,0,255"/>
-              <prop k="outline_style" v="solid"/>
               <prop k="outline_width" v="0"/>
               <prop k="outline_width_map_unit_scale" v="0,0,0,0,0,0"/>
               <prop k="outline_width_unit" v="MM"/>
               <prop k="scale_method" v="diameter"/>
-              <prop k="size" v="2"/>
+              <prop k="size" v="3"/>
               <prop k="size_map_unit_scale" v="0,0,0,0,0,0"/>
               <prop k="size_unit" v="MM"/>
               <prop k="vertical_anchor_point" v="1"/>
@@ -2917,22 +2970,20 @@ def my_form_open(dialog, layer, feature):
             </layer>
           </symbol>
           <symbol alpha="1" clip_to_extent="1" type="marker" name="36">
-            <layer pass="0" class="SimpleMarker" locked="0">
+            <layer pass="0" class="SvgMarker" locked="0">
               <prop k="angle" v="0"/>
               <prop k="color" v="217,24,17,255"/>
               <prop k="horizontal_anchor_point" v="1"/>
-              <prop k="joinstyle" v="bevel"/>
-              <prop k="name" v="circle"/>
+              <prop k="name" v="hotel.16.svg"/>
               <prop k="offset" v="0,0"/>
               <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
               <prop k="offset_unit" v="MM"/>
               <prop k="outline_color" v="0,0,0,255"/>
-              <prop k="outline_style" v="solid"/>
               <prop k="outline_width" v="0"/>
               <prop k="outline_width_map_unit_scale" v="0,0,0,0,0,0"/>
               <prop k="outline_width_unit" v="MM"/>
               <prop k="scale_method" v="diameter"/>
-              <prop k="size" v="2"/>
+              <prop k="size" v="3"/>
               <prop k="size_map_unit_scale" v="0,0,0,0,0,0"/>
               <prop k="size_unit" v="MM"/>
               <prop k="vertical_anchor_point" v="1"/>
@@ -2961,22 +3012,20 @@ def my_form_open(dialog, layer, feature):
             </layer>
           </symbol>
           <symbol alpha="1" clip_to_extent="1" type="marker" name="38">
-            <layer pass="0" class="SimpleMarker" locked="0">
+            <layer pass="0" class="SvgMarker" locked="0">
               <prop k="angle" v="0"/>
               <prop k="color" v="217,70,126,255"/>
               <prop k="horizontal_anchor_point" v="1"/>
-              <prop k="joinstyle" v="bevel"/>
-              <prop k="name" v="circle"/>
+              <prop k="name" v="information.12.svg"/>
               <prop k="offset" v="0,0"/>
               <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
               <prop k="offset_unit" v="MM"/>
               <prop k="outline_color" v="0,0,0,255"/>
-              <prop k="outline_style" v="solid"/>
               <prop k="outline_width" v="0"/>
               <prop k="outline_width_map_unit_scale" v="0,0,0,0,0,0"/>
               <prop k="outline_width_unit" v="MM"/>
               <prop k="scale_method" v="diameter"/>
-              <prop k="size" v="2"/>
+              <prop k="size" v="3"/>
               <prop k="size_map_unit_scale" v="0,0,0,0,0,0"/>
               <prop k="size_unit" v="MM"/>
               <prop k="vertical_anchor_point" v="1"/>
@@ -3247,44 +3296,40 @@ def my_form_open(dialog, layer, feature):
             </layer>
           </symbol>
           <symbol alpha="1" clip_to_extent="1" type="marker" name="5">
-            <layer pass="0" class="SimpleMarker" locked="0">
+            <layer pass="0" class="SvgMarker" locked="0">
               <prop k="angle" v="0"/>
               <prop k="color" v="166,237,111,255"/>
               <prop k="horizontal_anchor_point" v="1"/>
-              <prop k="joinstyle" v="bevel"/>
-              <prop k="name" v="circle"/>
+              <prop k="name" v="bank.16.svg"/>
               <prop k="offset" v="0,0"/>
               <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
               <prop k="offset_unit" v="MM"/>
               <prop k="outline_color" v="0,0,0,255"/>
-              <prop k="outline_style" v="solid"/>
               <prop k="outline_width" v="0"/>
               <prop k="outline_width_map_unit_scale" v="0,0,0,0,0,0"/>
               <prop k="outline_width_unit" v="MM"/>
               <prop k="scale_method" v="diameter"/>
-              <prop k="size" v="2"/>
+              <prop k="size" v="3"/>
               <prop k="size_map_unit_scale" v="0,0,0,0,0,0"/>
               <prop k="size_unit" v="MM"/>
               <prop k="vertical_anchor_point" v="1"/>
             </layer>
           </symbol>
           <symbol alpha="1" clip_to_extent="1" type="marker" name="50">
-            <layer pass="0" class="SimpleMarker" locked="0">
+            <layer pass="0" class="SvgMarker" locked="0">
               <prop k="angle" v="0"/>
               <prop k="color" v="210,81,157,255"/>
               <prop k="horizontal_anchor_point" v="1"/>
-              <prop k="joinstyle" v="bevel"/>
-              <prop k="name" v="circle"/>
+              <prop k="name" v="parking.svg"/>
               <prop k="offset" v="0,0"/>
               <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
               <prop k="offset_unit" v="MM"/>
               <prop k="outline_color" v="0,0,0,255"/>
-              <prop k="outline_style" v="solid"/>
               <prop k="outline_width" v="0"/>
               <prop k="outline_width_map_unit_scale" v="0,0,0,0,0,0"/>
               <prop k="outline_width_unit" v="MM"/>
               <prop k="scale_method" v="diameter"/>
-              <prop k="size" v="2"/>
+              <prop k="size" v="3"/>
               <prop k="size_map_unit_scale" v="0,0,0,0,0,0"/>
               <prop k="size_unit" v="MM"/>
               <prop k="vertical_anchor_point" v="1"/>
@@ -3335,22 +3380,20 @@ def my_form_open(dialog, layer, feature):
             </layer>
           </symbol>
           <symbol alpha="1" clip_to_extent="1" type="marker" name="53">
-            <layer pass="0" class="SimpleMarker" locked="0">
+            <layer pass="0" class="SvgMarker" locked="0">
               <prop k="angle" v="0"/>
               <prop k="color" v="202,61,226,255"/>
               <prop k="horizontal_anchor_point" v="1"/>
-              <prop k="joinstyle" v="bevel"/>
-              <prop k="name" v="circle"/>
+              <prop k="name" v="pharmacy.16.svg"/>
               <prop k="offset" v="0,0"/>
               <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
               <prop k="offset_unit" v="MM"/>
               <prop k="outline_color" v="0,0,0,255"/>
-              <prop k="outline_style" v="solid"/>
               <prop k="outline_width" v="0"/>
               <prop k="outline_width_map_unit_scale" v="0,0,0,0,0,0"/>
               <prop k="outline_width_unit" v="MM"/>
               <prop k="scale_method" v="diameter"/>
-              <prop k="size" v="2"/>
+              <prop k="size" v="3"/>
               <prop k="size_map_unit_scale" v="0,0,0,0,0,0"/>
               <prop k="size_unit" v="MM"/>
               <prop k="vertical_anchor_point" v="1"/>
@@ -3425,7 +3468,7 @@ def my_form_open(dialog, layer, feature):
           <symbol alpha="1" clip_to_extent="1" type="marker" name="57">
             <layer pass="0" class="SimpleMarker" locked="0">
               <prop k="angle" v="0"/>
-              <prop k="color" v="101,240,129,255"/>
+              <prop k="color" v="136,209,113,255"/>
               <prop k="horizontal_anchor_point" v="1"/>
               <prop k="joinstyle" v="bevel"/>
               <prop k="name" v="circle"/>
@@ -3447,7 +3490,7 @@ def my_form_open(dialog, layer, feature):
           <symbol alpha="1" clip_to_extent="1" type="marker" name="58">
             <layer pass="0" class="SimpleMarker" locked="0">
               <prop k="angle" v="0"/>
-              <prop k="color" v="136,209,113,255"/>
+              <prop k="color" v="34,160,232,255"/>
               <prop k="horizontal_anchor_point" v="1"/>
               <prop k="joinstyle" v="bevel"/>
               <prop k="name" v="circle"/>
@@ -3469,7 +3512,7 @@ def my_form_open(dialog, layer, feature):
           <symbol alpha="1" clip_to_extent="1" type="marker" name="59">
             <layer pass="0" class="SimpleMarker" locked="0">
               <prop k="angle" v="0"/>
-              <prop k="color" v="34,160,232,255"/>
+              <prop k="color" v="101,240,129,255"/>
               <prop k="horizontal_anchor_point" v="1"/>
               <prop k="joinstyle" v="bevel"/>
               <prop k="name" v="circle"/>
@@ -3533,22 +3576,20 @@ def my_form_open(dialog, layer, feature):
             </layer>
           </symbol>
           <symbol alpha="1" clip_to_extent="1" type="marker" name="61">
-            <layer pass="0" class="SimpleMarker" locked="0">
+            <layer pass="0" class="SvgMarker" locked="0">
               <prop k="angle" v="0"/>
               <prop k="color" v="67,230,38,255"/>
               <prop k="horizontal_anchor_point" v="1"/>
-              <prop k="joinstyle" v="bevel"/>
-              <prop k="name" v="circle"/>
+              <prop k="name" v="restaurant.16.svg"/>
               <prop k="offset" v="0,0"/>
               <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
               <prop k="offset_unit" v="MM"/>
               <prop k="outline_color" v="0,0,0,255"/>
-              <prop k="outline_style" v="solid"/>
               <prop k="outline_width" v="0"/>
               <prop k="outline_width_map_unit_scale" v="0,0,0,0,0,0"/>
               <prop k="outline_width_unit" v="MM"/>
               <prop k="scale_method" v="diameter"/>
-              <prop k="size" v="2"/>
+              <prop k="size" v="3"/>
               <prop k="size_map_unit_scale" v="0,0,0,0,0,0"/>
               <prop k="size_unit" v="MM"/>
               <prop k="vertical_anchor_point" v="1"/>
@@ -3841,22 +3882,20 @@ def my_form_open(dialog, layer, feature):
             </layer>
           </symbol>
           <symbol alpha="1" clip_to_extent="1" type="marker" name="74">
-            <layer pass="0" class="SimpleMarker" locked="0">
+            <layer pass="0" class="SvgMarker" locked="0">
               <prop k="angle" v="0"/>
               <prop k="color" v="235,46,106,255"/>
               <prop k="horizontal_anchor_point" v="1"/>
-              <prop k="joinstyle" v="bevel"/>
-              <prop k="name" v="circle"/>
+              <prop k="name" v="toilets.16.svg"/>
               <prop k="offset" v="0,0"/>
               <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
               <prop k="offset_unit" v="MM"/>
               <prop k="outline_color" v="0,0,0,255"/>
-              <prop k="outline_style" v="solid"/>
               <prop k="outline_width" v="0"/>
               <prop k="outline_width_map_unit_scale" v="0,0,0,0,0,0"/>
               <prop k="outline_width_unit" v="MM"/>
               <prop k="scale_method" v="diameter"/>
-              <prop k="size" v="2"/>
+              <prop k="size" v="3"/>
               <prop k="size_map_unit_scale" v="0,0,0,0,0,0"/>
               <prop k="size_unit" v="MM"/>
               <prop k="vertical_anchor_point" v="1"/>
@@ -4207,18 +4246,18 @@ def my_form_open(dialog, layer, feature):
         <property key="labeling/fieldName" value="name"/>
         <property key="labeling/fitInPolygonOnly" value="false"/>
         <property key="labeling/fontCapitals" value="0"/>
-        <property key="labeling/fontFamily" value="Cantarell"/>
-        <property key="labeling/fontItalic" value="false"/>
+        <property key="labeling/fontFamily" value="Ubuntu"/>
+        <property key="labeling/fontItalic" value="true"/>
         <property key="labeling/fontLetterSpacing" value="0"/>
         <property key="labeling/fontLimitPixelSize" value="false"/>
         <property key="labeling/fontMaxPixelSize" value="10000"/>
         <property key="labeling/fontMinPixelSize" value="3"/>
-        <property key="labeling/fontSize" value="9"/>
+        <property key="labeling/fontSize" value="8"/>
         <property key="labeling/fontSizeInMapUnits" value="false"/>
         <property key="labeling/fontSizeMapUnitScale" value="0,0,0,0,0,0"/>
         <property key="labeling/fontStrikeout" value="false"/>
         <property key="labeling/fontUnderline" value="false"/>
-        <property key="labeling/fontWeight" value="50"/>
+        <property key="labeling/fontWeight" value="63"/>
         <property key="labeling/fontWordSpacing" value="0"/>
         <property key="labeling/formatNumbers" value="false"/>
         <property key="labeling/isExpression" value="false"/>
@@ -4234,7 +4273,7 @@ def my_form_open(dialog, layer, feature):
         <property key="labeling/minFeatureSize" value="0"/>
         <property key="labeling/multilineAlign" value="0"/>
         <property key="labeling/multilineHeight" value="1"/>
-        <property key="labeling/namedStyle" value="BoldOblique"/>
+        <property key="labeling/namedStyle" value="Medium Italic"/>
         <property key="labeling/obstacle" value="true"/>
         <property key="labeling/obstacleFactor" value="1"/>
         <property key="labeling/obstacleType" value="0"/>
@@ -4306,14 +4345,14 @@ def my_form_open(dialog, layer, feature):
         <property key="labeling/shapeTransparency" value="0"/>
         <property key="labeling/shapeType" value="0"/>
         <property key="labeling/textColorA" value="255"/>
-        <property key="labeling/textColorB" value="0"/>
-        <property key="labeling/textColorG" value="0"/>
-        <property key="labeling/textColorR" value="0"/>
+        <property key="labeling/textColorB" value="150"/>
+        <property key="labeling/textColorG" value="150"/>
+        <property key="labeling/textColorR" value="150"/>
         <property key="labeling/textTransp" value="0"/>
         <property key="labeling/upsidedownLabels" value="0"/>
         <property key="labeling/wrapChar" value=""/>
         <property key="labeling/xOffset" value="0"/>
-        <property key="labeling/yOffset" value="1"/>
+        <property key="labeling/yOffset" value="2"/>
         <property key="labeling/zIndex" value="0"/>
         <property key="variableNames" value="_fields_"/>
         <property key="variableValues" value=""/>
@@ -4422,7 +4461,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>43.75435250000000309</ymax>
       </extent>
       <id>railways20160812134437381</id>
-      <datasource>./data/railways.shp</datasource>
+      <datasource>../data/railways.shp</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -4747,7 +4786,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>43.75191619999999659</ymax>
       </extent>
       <id>roads20160812134437384</id>
-      <datasource>./data/roads.shp</datasource>
+      <datasource>../data/roads.shp</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -5762,7 +5801,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>43.74063180000000273</ymax>
       </extent>
       <id>waterways20160812134437386</id>
-      <datasource>./data/waterways.shp</datasource>
+      <datasource>../data/waterways.shp</datasource>
       <keywordList>
         <value></value>
       </keywordList>
